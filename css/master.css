@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.clearfix {
+.clearfix::after {
   content: '';
   display: table;
   clear: both;
@@ -12,6 +12,11 @@
 
 body {
   font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+}
+
+p {
+  color: rgb(125,124,123);
 }
 
 /* sfondo parte superiore */
@@ -23,7 +28,7 @@ body {
 /* fine sfondo parte superiore */
 
 .inside_container {
-  width: 90%;
+  width: 80%;
   height: 500px;
   margin: 0 auto;
 }
@@ -57,7 +62,7 @@ li {
   display: inline-block;
   padding: 0 10px;
 }
-a {
+a:not(#placement_test) {
   text-decoration: none;
   color: white;
 }
@@ -91,9 +96,9 @@ a {
 }
 
 .banner_text > h1 {
-  max-width: 40%;
+  max-width: 60%;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 350%;
   color: white;
 }
 .banner_text > span {
@@ -117,13 +122,119 @@ a {
 .sfondo_grey {
   width: 100%;
   height: 100px;
-  padding:20px;
+  padding: 20px;
   background-color: rgb(204,202,200);
   text-align: center;
 }
-
 /* fine barra grigia */
 
+/* inizio main */
+main {
+  margin: 20px 100px;
+}
+main section {
+  height: 425px;
+  padding: 20px;
+  margin: auto;
+}
 
+.main_top .column {
+  display: inline-block;
+  width: 33%;
+  float: left;
+}
+.column .column_image {
+  max-height: 170px;
+  margin: auto;
+}
+#profile_img {
+  width: 29%;
+}
+#computer_img {
+  width: 50%;
+}
+#doc_img {
+  width: 35%;
+}
 
-/* quello che segue è da eliminare alla fine */
+.column_title, .column_paragraph {
+  text-align: center;
+  padding: 20px 40px;
+}
+.column_title {
+  color: rgb(148,186,41);
+}
+.column hr {
+  width: 80px;
+  margin: auto;
+}
+#second_title {
+  margin-bottom: 20px;
+}
+#third_title {
+  margin-bottom: 20px;
+}
+
+.main_bottom {
+  border-top: 1px solid rgb(204,202,200);
+}
+.main_bottom_left,
+.main_bottom_right {
+  width: 50%;
+  float: left;
+}
+.main_bottom_left > img {
+  width: 70%;
+  margin-left: 80px;
+}
+.main_bottom_right > h2 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+.main_bottom_right > span {
+  display: block;
+  margin-top: 20px;
+}
+/* fine main */
+
+/* inizio footer */
+.footer_left,
+.footer_right {
+  line-height: 50px;
+  vertical-align: 50px;
+}
+h2.footer_left {
+  width: 30%;
+  font-size: 2em;
+  float: left;
+}
+.footer_right {
+  width: 70%;
+  float: right;
+}
+.footer_right span {
+  color: rgb(125,124,123);
+  padding-right: 20px;
+}
+#seleziona {
+  width: 170px;
+  display: inline-block;
+  text-align: left;
+  border-bottom: 1px solid rgb(125,124,123);
+}
+.fa-sort-down {
+  color: rgb(125,124,123);
+}
+.footer_right > .bottone {
+  margin-left: 30px;
+}
+/* fine footer */
+
+/* help button */
+#help_btn {
+  position: fixed;
+  bottom: 0;
+  right: 200px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
