@@ -62,9 +62,12 @@ li {
   display: inline-block;
   padding: 0 10px;
 }
-a:not(#placement_test) {
+a {
   text-decoration: none;
   color: white;
+}
+a:hover {
+  color: rgb(148,186,41);
 }
 /* fine navbar */
 
@@ -77,9 +80,21 @@ a:not(#placement_test) {
 .bottone_blu {
   border: 1px solid white;
 }
+.bottone_blu:hover {
+  border-color: rgb(148,186,41);
+}
+.bottone_blu:hover  > a {
+  color: rgb(148,186,41);
+}
 
 .bottone_verde {
   background-color: rgb(148,186,41);
+}
+.bottone_verde:hover {
+  background-color: rgb(102, 129, 27);
+}
+.bottone_verde:hover > a {
+  color: white;
 }
 /* fine bottoni */
 
@@ -139,7 +154,6 @@ main section {
 }
 
 .main_top .column {
-  display: inline-block;
   width: 33%;
   float: left;
 }
@@ -194,6 +208,12 @@ main section {
 .main_bottom_right > span {
   display: block;
   margin-top: 20px;
+}
+.main_bottom_right #placement_test {
+  color: rgb(43, 43, 190);
+}
+.main_bottom_right #placement_test:hover {
+  color: rgb(148,186,41);
 }
 /* fine main */
 
